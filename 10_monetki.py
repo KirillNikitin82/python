@@ -3,12 +3,24 @@
 # которые нужно перевернуть, чтобы все монетки были повернуты вверх одной и той же стороной. 
 # Выведите минимальное количество монет, которые нужно перевернуть
 
-def min_flips(coins):
-    head_count = coins.count('H')
-    tail_count = coins.count('T')
-    flips_needed = min(head_count, tail_count)
-    return flips_needed
-
+from random import randint
 n = int(input("Введите количество монет: "))
-coins = input("Ведите сколько монет орел (H/T): ")
-print("Минимальное количество переворотов:", min_flips(coins))
+list_1=[randint(0,1) for i in range(n)]
+print(list_1)
+list_1.sort()
+reshka=0
+orel=0
+for i in range (len(list_1)):
+    if list_1[i]==0:
+        reshka+=1
+    else:
+        orel+=1
+print(list_1)
+print()
+print(f'{reshka= } {orel= }')
+if reshka>orel:
+    print(f"Нужно перевернуть минимум {orel} монет")
+else:
+    print(f"Нужно перевернуть минимум {reshka} монет")
+
+

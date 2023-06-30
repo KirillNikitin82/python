@@ -11,8 +11,7 @@ p = int(input("Введите произведение чисел X и Y: "))
 for x in range(1, 1001):
     y = s - x
     if x * y == p:
-        print("Число X =", x)
-        print("Число Y =", y)
+        print("Эти числа:", x, "и", y)
         break
 else:
     print("Такие числа X и Y не существуют.")
