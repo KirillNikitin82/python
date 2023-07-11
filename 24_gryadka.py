@@ -13,7 +13,8 @@ from random import randint
 
 n = int(input("Введите количество кустов: "))
 bush = [randint(0, 10) for _ in range(n)]
-res = []
+
+res = {}
 print(bush)
 for i in range(len(bush)-1):
     if i != 0 or i != n:
